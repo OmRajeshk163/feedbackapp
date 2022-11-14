@@ -1,0 +1,16 @@
+{
+  "unpublishedCollection": {
+    "name": "KRACategoryObj",
+    "pageId": "ReviewerFeedback",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\tgetKraOptions: () => {\n\t\t//write code here\n\t\treturn getKraCategories.data.map(category=>({label: category.name, value: category.id}))\n\t},\n\t\n}",
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "ReviewerFeedback_KRACategoryObj",
+  "deleted": false,
+  "gitSyncId": "6361ef20dfa75b056e2ed6b2_6363872cbaf07e59ff350f11"
+}

@@ -1,0 +1,25 @@
+{
+  "unpublishedCollection": {
+    "name": "kraObj",
+    "pageId": "AdminDashboard",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\tmyVar1: [],\n\tmyVar2: {},\n\tonSuccessfulCreate: () => {\n\t\t{{getKraCategories.run()}}\n\t\t{{showAlert(\"Created Successfully\", 'success')}}\n\t\t{{closeModal('createCategory')}}\n\t},\n\tonSuccessfulUpdate: () => {\n\t\t{{getKraCategories.run()}}\n\t\t{{showAlert(\"Updated Successfully\", 'success')}}\n\t\t{{closeModal('updateCategory')}}\n\t},\n\tonSuccessfulDelete: () => {\n\t\t{{deleteKraCategory.run()}}\n\t\t{{showAlert(\"Deleted Successfully\", 'success')}}\n\t\t{{getKraCategories.run()}}\n\t}\n}",
+    "variables": [
+      {
+        "name": "myVar1",
+        "value": "[]"
+      },
+      {
+        "name": "myVar2",
+        "value": "{}"
+      }
+    ],
+    "userPermissions": []
+  },
+  "id": "AdminDashboard_kraObj",
+  "deleted": false,
+  "gitSyncId": "6361ef20dfa75b056e2ed6b2_6361ef20dfa75b056e2ed727"
+}

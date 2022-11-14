@@ -1,0 +1,16 @@
+{
+  "unpublishedCollection": {
+    "name": "goObj",
+    "pageId": "FeedbackHome",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\tonClickNavigate: () => {\n\t\tif(FeedbackType.selectedOptionValue == 'peer'){\n\t\t\tnavigateTo('PeerFeedback', {}, 'SAME_WINDOW')\n\t\t}\n\t\telse if(FeedbackType.selectedOptionValue == 'self'){\n\t\t\tnavigateTo('SelfFeedback', {}, 'SAME_WINDOW')\n\t\t}\n\t\telse if(FeedbackType.selectedOptionValue == 'reviewer'){\n\t\t\tnavigateTo('ReviewerFeedback', {}, 'SAME_WINDOW')\n\t\t}\n\t\telse{\n\t\t\tshowAlert('Not Found', 'Error')\n\t\t}\n\t},\n}",
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "FeedbackHome_goObj",
+  "deleted": false,
+  "gitSyncId": "6361ef20dfa75b056e2ed6b2_6364e9d54c80470350f60ee4"
+}

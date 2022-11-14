@@ -1,0 +1,16 @@
+{
+  "unpublishedCollection": {
+    "name": "peerObj",
+    "pageId": "ReviewerFeedback",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\t\tgetEmpOptions: () => {\n\t\t//write code here\n\t\tconst getOptions=getEmp.data.filter(emp=>emp.reviewer==reviewerName.selectedOptionValue)\n\t\t.map(emp=>({label:emp.name,value:emp.id}));\n\t\treturn getOptions;\n\t},\n\tgetPeerRole:()=>{\n\t\tconst peerId=toName.selectedOptionValue;\n\t\tconsole.log(\"imHererergetEmployeesere123456\")\n\t\tif(peerId){\n\t\t\tconsole.log(\"oiuytresddfg\",getKra.data,peerId);\n\t\t\t\tconst peerData = getEmp.data.find(self=>self.id===peerId)\n\t\t\t\treturn peerData.role??\"\";\n\t\t\t\t//return getEmployeeById.data[0].role??\"\";\n\t\t}\n\t},\n\tgetPeerLevel:()=>{\n\t\tconst peerId=toName.selectedOptionValue;\n\t\tif(peerId){\n\t\t\t\tconst selfData = getEmp.data.find(self=>self.id===peerId)\n\t\t\t\treturn selfData.level??\"\";\n\t\t}\n\t},\n}",
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "ReviewerFeedback_peerObj",
+  "deleted": false,
+  "gitSyncId": "6361ef20dfa75b056e2ed6b2_6364b9fc4c80470350f609b5"
+}

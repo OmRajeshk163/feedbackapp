@@ -1,0 +1,40 @@
+{
+  "pages": [
+    {
+      "id": "FeedbackHome",
+      "isDefault": true
+    },
+    {
+      "id": "AdminDashboard",
+      "isDefault": false
+    },
+    {
+      "id": "SelfFeedback",
+      "isDefault": false
+    },
+    {
+      "id": "PeerFeedback",
+      "isDefault": false
+    },
+    {
+      "id": "ReviewerFeedback",
+      "isDefault": false
+    }
+  ],
+  "viewMode": false,
+  "appIsExample": false,
+  "unreadCommentThreads": 0,
+  "clonedFromApplicationId": "6350f72a2b79bf615d8201b0",
+  "color": "#FFDEDE",
+  "icon": "calender",
+  "unpublishedAppLayout": {
+    "type": "FLUID"
+  },
+  "publishedAppLayout": {
+    "type": "FLUID"
+  },
+  "evaluationVersion": 2,
+  "applicationVersion": 2,
+  "isManualUpdate": false,
+  "deleted": false
+}

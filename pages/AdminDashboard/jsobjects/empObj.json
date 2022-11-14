@@ -1,0 +1,16 @@
+{
+  "unpublishedCollection": {
+    "name": "empObj",
+    "pageId": "AdminDashboard",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\tgetReviewerSelectData: () => {\n\t\t//const empData= getEmployees.data.map(employee=>({label:employee.name, value:employee.id}))\n\t\tconst empData= getEmployees.data.map(employee=>({label:employee.name, value:employee.id}))\n\t\treturn empData\n\t},\n\tonSuccessfulCreate: () => {\n\t\t{{getEmployees.run(() => {\n\t\t\t{{showAlert(\"Created Successfully\", 'success')}}\n\t\t\t{{closeModal('createEmployee')}}\n\t\t})}}\n\t},\n\tonSuccessfulUpdate: () => {\n\t\t{{getEmployees.run(() => {\n\t\t\t{{showAlert(\"Updated Successfully\", 'success')}}\n\t\t\t{{closeModal('updateEmployee')}}\n\t\t})}}\n\t},\n\tonSuccessfulDelete: () => {\n\t\t{{deleteEmployee.run()}}\n\t\t{{getEmployees.run()}}\n\t\t{{showAlert(\"Deleted Successfully\", 'success')}}\n\t\t{{closeModal('deleteEmpModal')}}\n\t}\n}",
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "AdminDashboard_empObj",
+  "deleted": false,
+  "gitSyncId": "6361ef20dfa75b056e2ed6b2_6361ef20dfa75b056e2ed725"
+}

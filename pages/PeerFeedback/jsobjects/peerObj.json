@@ -1,0 +1,16 @@
+{
+  "unpublishedCollection": {
+    "name": "peerObj",
+    "pageId": "PeerFeedback",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\tgetEmpOptions: () => {\n\t\t//write code here\n\t\tconst getOptions=getEmployees.data.map(emp=>({label:emp.name,value:emp.id}));\n\t\treturn getOptions;\n\t},\n\tgetPeerRole:()=>{\n\t\tconst peerId=PeerName.selectedOptionValue;\n\t\tconsole.log(\"imHererergetEmployeesere123456\")\n\t\tif(peerId){\n\t\t\tconsole.log(\"oiuytresddfg\",getKraCategories.data,peerId);\n\t\t\t\tconst peerData = getEmployees.data.find(self=>self.id===peerId)\n\t\t\t\treturn peerData.role??\"\";\n\t\t\t\t//return getEmployeeById.data[0].role??\"\";\n\t\t}\n\t},\n\tgetPeerLevel:()=>{\n\t\tconst peerId=PeerName.selectedOptionValue;\n\t\tif(peerId){\n\t\t\t\t//const reviewerData = getEmployees.data.filter(reviewer=>reviewer.id===reviewerId)\n\t\t\t\tconst selfData = getEmployees.data.find(self=>self.id===peerId)\n\t\t\t\treturn selfData.level??\"\";\n\t\t}\n\t},\n\t\n\tgetFeedbackOptions: () => {\n\t\t//write code here\n\t\tconst peerId=PeerName.selectedOptionValue??\"\";\n\t\tconst getOptions=getEmployees.data.map(emp=>({label:emp.name,value:emp.id})).filter(item=>item.value!=peerId);\n\t\tconsole.log(\"peerIdgetOptionseerId\",peerId,getOptions)\n\t\t\n\t\treturn getOptions??[];\n\t},\n\tgetfeedbackRole:()=>{\n\t\tconst peerId=feedbackToName.selectedOptionValue;\n\t\tconsole.log(\"imHererergetEmployeesere123456\")\n\t\tif(peerId){\n\t\t\tconsole.log(\"oiuytresddfg\",getKraCategories.data,peerId);\n\t\t\t\tconst peerData = getEmployees.data.find(self=>self.id===peerId)\n\t\t\t\treturn peerData.role??\"\";\n\t\t\t\t//return getEmployeeById.data[0].role??\"\";\n\t\t}\n\t},\n\tgetfeedbackLevel:()=>{\n\t\tconst peerId=feedbackToName.selectedOptionValue;\n\t\tif(peerId){\n\t\t\t\t//const reviewerData = getEmployees.data.filter(reviewer=>reviewer.id===reviewerId)\n\t\t\t\tconst selfData = getEmployees.data.find(self=>self.id===peerId)\n\t\t\t\treturn selfData.level??\"\";\n\t\t}\n\t},\n\tdisableNameddl:()=>{\n\tif(PeerName.selectedOptionValue.length===0)\n\treturn true;\n\tif(PeerName.selectedOptionValue.length!=0)\n\treturn false;\n},\n}",
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "PeerFeedback_peerObj",
+  "deleted": false,
+  "gitSyncId": "6361ef20dfa75b056e2ed6b2_6361ef20dfa75b056e2ed72f"
+}

@@ -1,0 +1,16 @@
+{
+  "unpublishedCollection": {
+    "name": "selfObj",
+    "pageId": "SelfFeedback",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\tgetEmpOptions: () => {\n\t\t//write code here\n\t\tconst getOptions=getEmployees.data.map(emp=>({label:emp.name,value:emp.id}));\n\t\treturn getOptions;\n\t},\n\tgetSelfRole:()=>{\n\t\tconst selfId=selfName.selectedOptionValue;\n\t\tconsole.log(\"imHererergetEmployeesere123456\")\n\t\tif(selfId){\n\t\t\tconsole.log(\"oiuytresddfg\",getKraCategories.data,selfId);\n\t\t\t\tconst selfData = getEmployees.data.find(self=>self.id===selfId)\n\t\t\t\treturn selfData.role??\"\";\n\t\t\t\t//return getEmployeeById.data[0].role??\"\";\n\t\t}\n\t},\n\tgetSelfLevel:()=>{\n\t\tconst selfId=selfName.selectedOptionValue;\n\t\tif(selfId){\n\t\t\t\t//const reviewerData = getEmployees.data.filter(reviewer=>reviewer.id===reviewerId)\n\t\t\t\tconst selfData = getEmployees.data.find(self=>self.id===selfId)\n\t\t\t\treturn selfData.level??\"\";\n\t\t}\n\t},\n\tisListVisible:()=>{\n\t\treturn selfName.selectedOptionValue?true:false\n},\n\tmyFun2: async () => {\n\t\t//use async-await or promises\n\t}\n}",
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "SelfFeedback_selfObj",
+  "deleted": false,
+  "gitSyncId": "6361ef20dfa75b056e2ed6b2_6362361ddfa75b056e2edf78"
+}

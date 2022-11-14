@@ -1,0 +1,21 @@
+{
+  "unpublishedCollection": {
+    "name": "feedbackObj",
+    "pageId": "ReviewerFeedback",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\tratingsTooltips:[\"Does not meet expectation\",\"Satisfactory\",\"Average\",\"Excellent\",\"Exceeds expectations\"],\n\tgetCurrentDate:()=>{\n\t\tconst date=new Date();\n\t\tconst year=date.getFullYear();\n\t\tconst month=date.getMonth();\n\t\tconst day=date.getDate();\n\t\t\n\t\tconst hrs=date.getHours();\n\t\tconst mins=date.getMinutes();\n\t\tconst secs=date.getSeconds();\n\t\tconst milli=date.getMilliseconds();\n\t\t\n\t\tconst fullDate=`${year}/${month}/${(Number(day)<10?\"0\"+day:day)}  ${Number(hrs)<10?\"0\"+hrs:hrs}:${Number(mins)<10?\"0\"+mins:mins}:${Number(secs)<10?\"0\"+secs:secs}.${milli}`;\n\t\treturn fullDate;\n\t},\n\tgetcategoriesList:()=>{\n\t\tconst selfId=toName.selectedOptionValue;\n\t\tconst categories= getKraCategories.data;\n\t\tconst feedbacks = getFeedback.data.filter(fdbk=>fdbk.from_employee==selfId);\n\t\tconst custCategories= categories.map((category)=>{\n\t\t\t\tconst continueDoing=feedbacks.find(feedback=>feedback.category===category.id)?.feedback_continue??\"N/A\";\n\t\t\t\tconst canDo=feedbacks.find(feedback=>feedback.category===category.id)?.feedback_more_of??\"N/A\";\n\t\t\t\tconst rating=feedbacks.find(feedback=>feedback.category===category.id)?.rating??0;\n\t\t\t\tconst feedbackid=feedbacks.find(feedback=>feedback.category===category.id)?.id??0;\n\t\t\t\tconst cycle=feedbacks.find(feedback=>feedback.category===category.id)?.cycle??0;\n\t\t\t\treturn {name:category.name,\n\t\t\t\t\t\t\t\tdescription:category.description,\n\t\t\t\t\t\t\t\tcontinueDoing:continueDoing,\n\t\t\t\t\t\t\t\tcando:canDo,\n\t\t\t\t\t\t\t\trating:rating,\n\t\t\t\t\t\t\t\tid:category.id,\n\t\t\t\t\t\t\t\tfeedbackid:feedbackid,\n\t\t\t\t\t\t\t\tcycle:cycle\n\t\t\t\t\t\t\t };\n\t\t\t\t});\n\t\t\t\tconsole.log(\"feedbacfeedbacksks\",custCategories)\n\t\t\t\treturn custCategories;\n\t},\n\n\tgetFeeedbackForReview:()=>{\n\t\tconst employees = getEmployees.data;\n\t\tconst reviewerId = reviewerName.selectedOptionValue;\n\t\tconst categoryId = kraCategories.selectedOptionValue;\n\t\tconst reviewFeedbacks = getFeedback.data.map(feedback=>{\n\t\tif(feedback.to_employee==toName.selectedOptionValue && feedback.category==categoryId && feedback.feedback_type===\"reviewer\"){\n\t\t\t\treturn {\n\t\t\t\t\t...feedback,\n\t\t\t\t\tfrom_employee:employees.find(emp=>emp.id==feedback.from_employee)?.name??\"\",\n\t\t\t\t\tto_employee:employees.find(emp=>emp.id==feedback.to_employee)?.name??\"\"\n\t\t\t\t}\t\n\t\t\t}\n\t\t}).filter(e => e);\n\t\tconsole.log(\"dghsdtoFeedbacksdbfhjskdjfh\",reviewFeedbacks)\n\t\treturn reviewFeedbacks;\n\t},\n}",
+    "variables": [
+      {
+        "name": "ratingsTooltips",
+        "value": "[\"Does not meet expectation\", \"Satisfactory\", \"Average\", \"Excellent\", \"Exceeds expectations\"]"
+      }
+    ],
+    "userPermissions": []
+  },
+  "id": "ReviewerFeedback_feedbackObj",
+  "deleted": false,
+  "gitSyncId": "6361ef20dfa75b056e2ed6b2_6364b300168691232687a016"
+}
