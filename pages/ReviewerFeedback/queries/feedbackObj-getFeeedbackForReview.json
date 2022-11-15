@@ -19,7 +19,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n  const employees = getEmployees.data;\n  const reviewerId = reviewerName.selectedOptionValue;\n  const categoryId = kraCategories.selectedOptionValue;\n  const reviewFeedbacks = getFeedback.data.map(feedback => {\n    if (feedback.to_employee == toName.selectedOptionValue && feedback.category == categoryId && feedback.feedback_type === \"reviewer\") {\n      return {\n        ...feedback,\n        from_employee: employees.find(emp => emp.id == feedback.from_employee)?.name ?? \"\",\n        to_employee: employees.find(emp => emp.id == feedback.to_employee)?.name ?? \"\"\n      };\n    }\n  }).filter(e => e);\n  console.log(\"dghsdtoFeedbacksdbfhjskdjfh\", reviewFeedbacks);\n  return reviewFeedbacks;\n}",
+      "body": "() => {\n  const employees = getEmployees.data;\n  const reviewerId = reviewerName.selectedOptionValue;\n  const categoryId = kraCategories.selectedOptionValue;\n  const reviewFeedbacks = getFeedback.data.map(feedback => {\n    if (feedback.to_employee == toName.selectedOptionValue && feedback.category == categoryId && feedback.feedback_type === \"reviewer\" && feedback.cycle === feedbackObj.getRDateForCycle()) {\n      return {\n        ...feedback,\n        from_employee: employees.find(emp => emp.id == feedback.from_employee)?.name ?? \"\",\n        to_employee: employees.find(emp => emp.id == feedback.to_employee)?.name ?? \"\"\n      };\n    }\n  }).filter(e => e);\n  console.log(\"dghsdtoFeedbacksdbfhjskdjfh\", reviewFeedbacks);\n  return reviewFeedbacks;\n}",
       "selfReferencingDataPaths": [],
       "jsArguments": [],
       "isAsync": false
@@ -34,7 +34,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n  const employees = getEmployees.data;\n  const reviewerId = reviewerName.selectedOptionValue;\n  const categoryId = kraCategories.selectedOptionValue;\n  const reviewFeedbacks = getFeedback.data.map(feedback => {\n    if (feedback.to_employee == toName.selectedOptionValue && feedback.category == categoryId && feedback.feedback_type === \"reviewer\") {\n      return {\n        ...feedback,\n        from_employee: employees.find(emp => emp.id == feedback.from_employee)?.name ?? \"\",\n        to_employee: employees.find(emp => emp.id == feedback.to_employee)?.name ?? \"\"\n      };\n    }\n  }).filter(e => e);\n  console.log(\"dghsdtoFeedbacksdbfhjskdjfh\", reviewFeedbacks);\n  return reviewFeedbacks;\n}"
+      "() => {\n  const employees = getEmployees.data;\n  const reviewerId = reviewerName.selectedOptionValue;\n  const categoryId = kraCategories.selectedOptionValue;\n  const reviewFeedbacks = getFeedback.data.map(feedback => {\n    if (feedback.to_employee == toName.selectedOptionValue && feedback.category == categoryId && feedback.feedback_type === \"reviewer\" && feedback.cycle === feedbackObj.getRDateForCycle()) {\n      return {\n        ...feedback,\n        from_employee: employees.find(emp => emp.id == feedback.from_employee)?.name ?? \"\",\n        to_employee: employees.find(emp => emp.id == feedback.to_employee)?.name ?? \"\"\n      };\n    }\n  }).filter(e => e);\n  console.log(\"dghsdtoFeedbacksdbfhjskdjfh\", reviewFeedbacks);\n  return reviewFeedbacks;\n}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

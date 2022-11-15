@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "getEmpOptions",
-    "fullyQualifiedName": "peerObj.getEmpOptions",
+    "name": "getDateForCycle",
+    "fullyQualifiedName": "feedbackObj.getDateForCycle",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -13,13 +13,13 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "ReviewerFeedback",
-    "collectionId": "ReviewerFeedback_peerObj",
+    "pageId": "PeerFeedback",
+    "collectionId": "PeerFeedback_feedbackObj",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n  const getOptions = getEmployees.data.filter(emp => emp.reviewer == reviewerName.selectedOptionValue).map(emp => ({\n    label: emp.name,\n    value: emp.id\n  }));\n  return getOptions;\n}",
+      "body": "() => {\n  const date = new Date();\n  const cycleDate = [9, 10, 11, 12].includes(date.getMonth()) ? `Oct ${date.getFullYear()}` : [4, 5, 6, 7].includes(date.getMonth()) ? `Jun ${date.getFullYear()}` : \"\";\n  return cycleDate;\n}",
       "selfReferencingDataPaths": [],
       "jsArguments": [],
       "isAsync": false
@@ -34,14 +34,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n  const getOptions = getEmployees.data.filter(emp => emp.reviewer == reviewerName.selectedOptionValue).map(emp => ({\n    label: emp.name,\n    value: emp.id\n  }));\n  return getOptions;\n}"
+      "() => {\n  const date = new Date();\n  const cycleDate = [9, 10, 11, 12].includes(date.getMonth()) ? `Oct ${date.getFullYear()}` : [4, 5, 6, 7].includes(date.getMonth()) ? `Jun ${date.getFullYear()}` : \"\";\n  return cycleDate;\n}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "ReviewerFeedback_peerObj.getEmpOptions",
+  "id": "PeerFeedback_feedbackObj.getDateForCycle",
   "deleted": false,
-  "gitSyncId": "6361ef20dfa75b056e2ed6b2_6364b9fc4c80470350f609a9"
+  "gitSyncId": "6361ef20dfa75b056e2ed6b2_6373293ea9f37c02e740e764"
 }

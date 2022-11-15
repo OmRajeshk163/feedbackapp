@@ -822,58 +822,6 @@
                           "dynamicBindingPathList": [],
                           "children": [
                             {
-                              "boxShadow": "none",
-                              "widgetName": "reviewerCycleType",
-                              "isFilterable": false,
-                              "displayName": "Select",
-                              "iconSVG": "/static/media/icon.bd99caba5853ad71e4b3d8daffacb3a2.svg",
-                              "labelText": "",
-                              "searchTags": [
-                                "dropdown"
-                              ],
-                              "topRow": 0,
-                              "bottomRow": 4,
-                              "parentRowSpace": 10,
-                              "labelWidth": 5,
-                              "type": "SELECT_WIDGET",
-                              "serverSideFiltering": false,
-                              "hideCard": false,
-                              "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( reviewerObj.getReviewerFeedback().cycle))(reviewerCycleType.options, reviewerCycleType.serverSideFiltering) }}",
-                              "animateLoading": true,
-                              "parentColumnSpace": 10.435791015625,
-                              "dynamicTriggerPathList": [],
-                              "leftColumn": 20,
-                              "dynamicBindingPathList": [
-                                {
-                                  "key": "accentColor"
-                                },
-                                {
-                                  "key": "borderRadius"
-                                },
-                                {
-                                  "key": "defaultOptionValue"
-                                }
-                              ],
-                              "labelPosition": "Top",
-                              "options": "[\n  {\n    \"label\": \"Oct Cycle\",\n    \"value\": \"octcycle\"\n  },\n  {\n    \"label\": \"Jun Cycle\",\n    \"value\": \"juncycle\"\n  }\n]",
-                              "placeholderText": "Select Cycle",
-                              "isDisabled": false,
-                              "key": "a3oupckoy5",
-                              "labelTextSize": "0.875rem",
-                              "isRequired": false,
-                              "isDeprecated": false,
-                              "rightColumn": 40,
-                              "widgetId": "ey7sbc6ynx",
-                              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
-                              "isVisible": true,
-                              "version": 1,
-                              "parentId": "j7ta44gosg",
-                              "labelAlignment": "left",
-                              "renderMode": "CANVAS",
-                              "isLoading": false,
-                              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}"
-                            },
-                            {
                               "template": {
                                 "Canvas5": {
                                   "boxShadow": "none",
@@ -1750,8 +1698,8 @@
                                                 "paragraph",
                                                 "label"
                                               ],
-                                              "topRow": 5,
-                                              "bottomRow": 13,
+                                              "topRow": 4,
+                                              "bottomRow": 11,
                                               "parentRowSpace": 10,
                                               "type": "TEXT_WIDGET",
                                               "hideCard": false,
@@ -1971,8 +1919,8 @@
                                                 "paragraph",
                                                 "label"
                                               ],
-                                              "topRow": 1,
-                                              "bottomRow": 5,
+                                              "topRow": 0,
+                                              "bottomRow": 4,
                                               "parentRowSpace": 10,
                                               "type": "TEXT_WIDGET",
                                               "hideCard": false,
@@ -2981,6 +2929,107 @@
                               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                               "buttonVariant": "PRIMARY",
                               "placement": "CENTER"
+                            },
+                            {
+                              "widgetName": "cycleValuelbl",
+                              "displayName": "Text",
+                              "iconSVG": "/static/media/icon.97c59b523e6f70ba6f40a10fc2c7c5b5.svg",
+                              "searchTags": [
+                                "typography",
+                                "paragraph",
+                                "label"
+                              ],
+                              "topRow": 0,
+                              "bottomRow": 4,
+                              "parentRowSpace": 10,
+                              "type": "TEXT_WIDGET",
+                              "hideCard": false,
+                              "animateLoading": true,
+                              "overflow": "NONE",
+                              "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+                              "parentColumnSpace": 10.7940673828125,
+                              "dynamicTriggerPathList": [],
+                              "leftColumn": 29,
+                              "dynamicBindingPathList": [
+                                {
+                                  "key": "truncateButtonColor"
+                                },
+                                {
+                                  "key": "fontFamily"
+                                },
+                                {
+                                  "key": "borderRadius"
+                                },
+                                {
+                                  "key": "text"
+                                }
+                              ],
+                              "shouldTruncate": false,
+                              "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+                              "text": "{{feedbackObj.getRDateForCycle()}}",
+                              "key": "jiu54u2l58",
+                              "isDeprecated": false,
+                              "rightColumn": 40,
+                              "textAlign": "LEFT",
+                              "widgetId": "ysl6ra01de",
+                              "isVisible": true,
+                              "fontStyle": "BOLD",
+                              "textColor": "#71717a",
+                              "version": 1,
+                              "parentId": "j7ta44gosg",
+                              "renderMode": "CANVAS",
+                              "isLoading": false,
+                              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                              "fontSize": "1rem"
+                            },
+                            {
+                              "widgetName": "cycleTypelbl",
+                              "displayName": "Text",
+                              "iconSVG": "/static/media/icon.97c59b523e6f70ba6f40a10fc2c7c5b5.svg",
+                              "searchTags": [
+                                "typography",
+                                "paragraph",
+                                "label"
+                              ],
+                              "topRow": 0,
+                              "bottomRow": 4,
+                              "parentRowSpace": 10,
+                              "type": "TEXT_WIDGET",
+                              "hideCard": false,
+                              "animateLoading": true,
+                              "overflow": "NONE",
+                              "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+                              "parentColumnSpace": 10.7940673828125,
+                              "dynamicTriggerPathList": [],
+                              "leftColumn": 21,
+                              "dynamicBindingPathList": [
+                                {
+                                  "key": "truncateButtonColor"
+                                },
+                                {
+                                  "key": "fontFamily"
+                                },
+                                {
+                                  "key": "borderRadius"
+                                }
+                              ],
+                              "shouldTruncate": false,
+                              "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+                              "text": "Cycle :",
+                              "key": "jiu54u2l58",
+                              "isDeprecated": false,
+                              "rightColumn": 28,
+                              "textAlign": "LEFT",
+                              "widgetId": "3kss48qf1o",
+                              "isVisible": true,
+                              "fontStyle": "BOLD",
+                              "textColor": "#858282",
+                              "version": 1,
+                              "parentId": "j7ta44gosg",
+                              "renderMode": "CANVAS",
+                              "isLoading": false,
+                              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                              "fontSize": "1rem"
                             }
                           ],
                           "isDisabled": false,

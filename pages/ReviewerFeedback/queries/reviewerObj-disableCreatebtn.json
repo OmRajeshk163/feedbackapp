@@ -19,7 +19,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n  const currentFeedBack = reviewerObj.feedbackId;\n  const reviewerId = reviewerName.selectedOptionValue;\n  const selectedCategory = kraCategories.selectedOptionValue;\n  const feedbacks = getFeedback.data.filter(fdbk => fdbk.from_employee === reviewerId && fdbk.to_employee === toName.selectedOptionValue && fdbk.category === selectedCategory);\n  if (reviewerFeed_continue.text.length == 0 && reviewerFeed_moreOf.text.length == 0) return true;\n  if (reviewerId.length === 0 || toName.selectedOptionValue.length === 0 || selectedCategory.length === 0) return true;\n  if (feedbacks.length === 0 && reviewerFeed_continue.text.length > 0 && reviewerFeed_moreOf.text.length > 0) return false; else return true;\n}",
+      "body": "() => {\n  const currentFeedBack = reviewerObj.feedbackId;\n  const reviewerId = reviewerName.selectedOptionValue;\n  const selectedCategory = kraCategories.selectedOptionValue;\n  const feedbacks = getFeedback.data.filter(fdbk => fdbk.from_employee === reviewerId && fdbk.to_employee === toName.selectedOptionValue && fdbk.cycle === feedbackObj.getRDateForCycle() && fdbk.category === selectedCategory);\n  if (reviewerFeed_continue.text.length == 0 && reviewerFeed_moreOf.text.length == 0) return true;\n  if (reviewerId.length === 0 || toName.selectedOptionValue.length === 0 || selectedCategory.length === 0) return true;\n  if (feedbacks.length === 0 && reviewerFeed_continue.text.length > 0 && reviewerFeed_moreOf.text.length > 0) return false; else return true;\n}",
       "selfReferencingDataPaths": [],
       "jsArguments": [],
       "isAsync": false
@@ -34,7 +34,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n  const currentFeedBack = reviewerObj.feedbackId;\n  const reviewerId = reviewerName.selectedOptionValue;\n  const selectedCategory = kraCategories.selectedOptionValue;\n  const feedbacks = getFeedback.data.filter(fdbk => fdbk.from_employee === reviewerId && fdbk.to_employee === toName.selectedOptionValue && fdbk.category === selectedCategory);\n  if (reviewerFeed_continue.text.length == 0 && reviewerFeed_moreOf.text.length == 0) return true;\n  if (reviewerId.length === 0 || toName.selectedOptionValue.length === 0 || selectedCategory.length === 0) return true;\n  if (feedbacks.length === 0 && reviewerFeed_continue.text.length > 0 && reviewerFeed_moreOf.text.length > 0) return false; else return true;\n}"
+      "() => {\n  const currentFeedBack = reviewerObj.feedbackId;\n  const reviewerId = reviewerName.selectedOptionValue;\n  const selectedCategory = kraCategories.selectedOptionValue;\n  const feedbacks = getFeedback.data.filter(fdbk => fdbk.from_employee === reviewerId && fdbk.to_employee === toName.selectedOptionValue && fdbk.cycle === feedbackObj.getRDateForCycle() && fdbk.category === selectedCategory);\n  if (reviewerFeed_continue.text.length == 0 && reviewerFeed_moreOf.text.length == 0) return true;\n  if (reviewerId.length === 0 || toName.selectedOptionValue.length === 0 || selectedCategory.length === 0) return true;\n  if (feedbacks.length === 0 && reviewerFeed_continue.text.length > 0 && reviewerFeed_moreOf.text.length > 0) return false; else return true;\n}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

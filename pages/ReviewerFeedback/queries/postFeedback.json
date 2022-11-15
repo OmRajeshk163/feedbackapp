@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "INSERT INTO public.\"feedback\" (\"from_employee\", \"to_employee\",\"feedback_continue\",\"feedback_more_of\",\"created_timestamp\",\"updated_timestamp\",\"cycle\",\"category\",\"rating\",\"feedback_type\")  \nVALUES ({{reviewerName.selectedOptionValue}},\n\t\t\t\t{{toName.selectedOptionValue}},\n\t\t\t\t{{reviewerFeed_continue.text}},\n\t\t\t\t{{reviewerFeed_moreOf.text}},\n\t   \t\t{{feedbackObj.getCurrentDate()}},\n\t\t\t\tnull,\n\t\t\t\t{{feedbackObj.getCurrentCycle()}},\n\t\t\t\t{{kraCategories.selectedOptionValue}},\n\t\t\t\t{{reviewerRating.value}},\n\t\t\t\t'reviewer');",
+      "body": "INSERT INTO public.\"feedback\" (\"from_employee\", \"to_employee\",\"feedback_continue\",\"feedback_more_of\",\"created_timestamp\",\"updated_timestamp\",\"cycle\",\"category\",\"rating\",\"feedback_type\")  \nVALUES ({{reviewerName.selectedOptionValue}},\n\t\t\t\t{{toName.selectedOptionValue}},\n\t\t\t\t{{reviewerFeed_continue.text}},\n\t\t\t\t{{reviewerFeed_moreOf.text}},\n\t   \t\t{{feedbackObj.getCurrentDate()}},\n\t\t\t\tnull,\n\t\t\t\t{{feedbackObj.getRDateForCycle()}},\n\t\t\t\t{{kraCategories.selectedOptionValue}},\n\t\t\t\t{{reviewerRating.value}},\n\t\t\t\t'reviewer');",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -36,8 +36,8 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "feedbackObj.getCurrentCycle()",
       "feedbackObj.getCurrentDate()",
+      "feedbackObj.getRDateForCycle()",
       "kraCategories.selectedOptionValue",
       "reviewerFeed_continue.text",
       "reviewerFeed_moreOf.text",
