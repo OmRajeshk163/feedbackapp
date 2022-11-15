@@ -19,7 +19,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n  const empData = getEmployees.data.map(employee => ({\n    label: employee.name,\n    value: employee.id\n  }));\n  return empData;\n}",
+      "body": "() => {\n  let empData = [];\n  const uniqueIds = [];\n  getEmployees.data.map(employee => {\n    getEmployees.data.map(emp => {\n      if (employee.id === emp.reviewer) {\n        empData = [...empData, {\n          label: employee.name,\n          value: employee.name\n        }];\n      }\n    });\n  });\n  console.log(\"empDataempData\", empData);\n  const uniqueReviewers = empData.filter(element => {\n    const isDuplicate = uniqueIds.includes(element.value);\n    if (!isDuplicate) {\n      uniqueIds.push(element.value);\n      return true;\n    }\n    return false;\n  });\n  return uniqueReviewers;\n}",
       "selfReferencingDataPaths": [],
       "jsArguments": [],
       "isAsync": false
@@ -34,7 +34,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n  const empData = getEmployees.data.map(employee => ({\n    label: employee.name,\n    value: employee.id\n  }));\n  return empData;\n}"
+      "() => {\n  let empData = [];\n  const uniqueIds = [];\n  getEmployees.data.map(employee => {\n    getEmployees.data.map(emp => {\n      if (employee.id === emp.reviewer) {\n        empData = [...empData, {\n          label: employee.name,\n          value: employee.name\n        }];\n      }\n    });\n  });\n  console.log(\"empDataempData\", empData);\n  const uniqueReviewers = empData.filter(element => {\n    const isDuplicate = uniqueIds.includes(element.value);\n    if (!isDuplicate) {\n      uniqueIds.push(element.value);\n      return true;\n    }\n    return false;\n  });\n  return uniqueReviewers;\n}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

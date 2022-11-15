@@ -1034,7 +1034,7 @@
                       "labelPosition": "Left",
                       "labelStyle": "",
                       "inputType": "TEXT",
-                      "isDisabled": false,
+                      "isDisabled": true,
                       "key": "kf0a2cy2vz",
                       "labelTextSize": "0.875rem",
                       "isRequired": true,
@@ -2351,7 +2351,7 @@
                   "widgetName": "Canvas3",
                   "displayName": "Canvas",
                   "topRow": 0,
-                  "bottomRow": 810,
+                  "bottomRow": 850,
                   "parentRowSpace": 1,
                   "type": "CANVAS_WIDGET",
                   "canExtend": true,
@@ -2575,7 +2575,7 @@
                       "dynamicPropertyPathList": [],
                       "compactMode": "DEFAULT",
                       "displayName": "Table",
-                      "bottomRow": 79,
+                      "bottomRow": 83,
                       "columnWidthMap": {
                         "task": 245,
                         "step": 62,
@@ -2590,6 +2590,9 @@
                         },
                         {
                           "key": "primaryColumns.customColumn1.onClick"
+                        },
+                        {
+                          "key": "onRowSelected"
                         }
                       ],
                       "borderWidth": "1",
@@ -2609,7 +2612,7 @@
                           "fontStyle": "",
                           "enableFilter": true,
                           "enableSort": true,
-                          "isVisible": true,
+                          "isVisible": false,
                           "isDisabled": false,
                           "isCellEditable": false,
                           "isEditable": false,
@@ -2732,7 +2735,8 @@
                           "isDiscardVisible": true,
                           "computedValue": "{{employeeTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"working_since\"]))}}",
                           "validation": {},
-                          "cellBackground": ""
+                          "cellBackground": "",
+                          "outputFormat": "DD-MM-YYYY"
                         },
                         "date_of_joining": {
                           "allowCellWrapping": false,
@@ -2760,7 +2764,8 @@
                           "isDiscardVisible": true,
                           "computedValue": "{{employeeTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"date_of_joining\"]))}}",
                           "validation": {},
-                          "cellBackground": ""
+                          "cellBackground": "",
+                          "outputFormat": "DD-MM-YYYY"
                         },
                         "empid": {
                           "allowCellWrapping": false,
@@ -2777,7 +2782,7 @@
                           "fontStyle": "",
                           "enableFilter": true,
                           "enableSort": true,
-                          "isVisible": true,
+                          "isVisible": false,
                           "isDisabled": false,
                           "isCellEditable": false,
                           "isEditable": false,
@@ -2799,7 +2804,7 @@
                           "alias": "reviewer",
                           "horizontalAlignment": "LEFT",
                           "verticalAlignment": "CENTER",
-                          "columnType": "number",
+                          "columnType": "text",
                           "textColor": "",
                           "textSize": "0.875rem",
                           "fontStyle": "",
@@ -2814,7 +2819,7 @@
                           "label": "reviewer",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
-                          "computedValue": "{{employeeTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"reviewer\"]))}}",
+                          "computedValue": "{{employeeTable.processedTableData.map((currentRow, currentIndex) => ( getEmployees.data.find(emp=>emp.id===currentRow[\"reviewer\"])?.name??\"\"))}}",
                           "validation": {},
                           "cellBackground": ""
                         },
@@ -2885,6 +2890,7 @@
                           "onClick": "{{showModal('deleteEmpModal')}}"
                         }
                       },
+                      "onRowSelected": "{{showModal('updateEmployee')}}",
                       "key": "lncurfm7aq",
                       "isDeprecated": false,
                       "rightColumn": 64,
@@ -2922,7 +2928,7 @@
                   "widgetName": "Canvas4",
                   "displayName": "Canvas",
                   "topRow": 0,
-                  "bottomRow": 820,
+                  "bottomRow": 840,
                   "parentRowSpace": 1,
                   "type": "CANVAS_WIDGET",
                   "canExtend": true,
@@ -3140,7 +3146,7 @@
                       ],
                       "dynamicPropertyPathList": [],
                       "displayName": "Table",
-                      "bottomRow": 80,
+                      "bottomRow": 82,
                       "columnWidthMap": {
                         "task": 245,
                         "step": 62,
@@ -3155,6 +3161,9 @@
                         },
                         {
                           "key": "primaryColumns.customColumn1.onClick"
+                        },
+                        {
+                          "key": "onRowSelected"
                         }
                       ],
                       "borderWidth": "1",
@@ -3174,7 +3183,7 @@
                           "fontStyle": "",
                           "enableFilter": true,
                           "enableSort": true,
-                          "isVisible": true,
+                          "isVisible": false,
                           "isDisabled": false,
                           "isCellEditable": false,
                           "isEditable": false,
@@ -3314,7 +3323,7 @@
                           "fontStyle": "",
                           "enableFilter": true,
                           "enableSort": true,
-                          "isVisible": true,
+                          "isVisible": false,
                           "isDisabled": false,
                           "isCellEditable": false,
                           "isEditable": false,
@@ -3342,7 +3351,7 @@
                           "fontStyle": "",
                           "enableFilter": true,
                           "enableSort": true,
-                          "isVisible": true,
+                          "isVisible": false,
                           "isDisabled": false,
                           "isCellEditable": false,
                           "isEditable": false,
@@ -3422,6 +3431,7 @@
                           "onClick": "{{showModal('deleteModal')}}"
                         }
                       },
+                      "onRowSelected": "{{showModal('updateCategory')}}",
                       "key": "lncurfm7aq",
                       "isDeprecated": false,
                       "rightColumn": 64,

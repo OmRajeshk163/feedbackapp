@@ -2949,7 +2949,7 @@
                               "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
                               "parentColumnSpace": 10.7940673828125,
                               "dynamicTriggerPathList": [],
-                              "leftColumn": 29,
+                              "leftColumn": 28,
                               "dynamicBindingPathList": [
                                 {
                                   "key": "truncateButtonColor"
@@ -2969,7 +2969,7 @@
                               "text": "{{feedbackObj.getRDateForCycle()}}",
                               "key": "jiu54u2l58",
                               "isDeprecated": false,
-                              "rightColumn": 40,
+                              "rightColumn": 39,
                               "textAlign": "LEFT",
                               "widgetId": "ysl6ra01de",
                               "isVisible": true,
