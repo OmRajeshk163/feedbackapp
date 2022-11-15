@@ -332,8 +332,9 @@
                       "resetFormOnClick": false,
                       "boxShadow": "none",
                       "widgetName": "Button6Copy",
-                      "onClick": "{{updateKra.run(() => kraObj.onSuccessfulUpdate(), () => showAlert('Failed to Update','error'))}}",
+                      "onClick": "{{updateKraCategoryById.run(() => kraObj.onSuccessfulUpdate(), () => showAlert('Failed to Update','error'))}}",
                       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                      "dynamicPropertyPathList": [],
                       "displayName": "Button",
                       "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
                       "searchTags": [
@@ -945,9 +946,13 @@
                       "resetFormOnClick": true,
                       "boxShadow": "none",
                       "widgetName": "updateBtn",
-                      "onClick": "{{updateEmployee.run(() => empObj.onSuccessfulUpdate(), () => showAlert('Failed to update','error'))}}",
+                      "onClick": "{{updateEmployeeById.run(() => empObj.onSuccessfulUpdate(), () => showAlert('Failed to update','error'))}}",
                       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
-                      "dynamicPropertyPathList": [],
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
                       "displayName": "Button",
                       "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
                       "searchTags": [
@@ -1247,7 +1252,7 @@
                   "children": [
                     {
                       "boxShadow": "none",
-                      "widgetName": "EmpReviewer",
+                      "widgetName": "empReviewer",
                       "isFilterable": true,
                       "dynamicPropertyPathList": [
                         {
@@ -1289,7 +1294,7 @@
                       "labelPosition": "Left",
                       "options": "{{empObj.getReviewerSelectData()}}",
                       "placeholderText": "Select option",
-                      "isDisabled": "{{getEmp.data.length < 1?true:false}}",
+                      "isDisabled": "{{getEmployees.data.length < 1?true:false}}",
                       "key": "ndzrmc8vqd",
                       "labelTextSize": "0.875rem",
                       "isRequired": false,
@@ -2127,8 +2132,9 @@
                       "resetFormOnClick": false,
                       "boxShadow": "none",
                       "widgetName": "Button6",
-                      "onClick": "{{postKra.run(() => kraObj.onSuccessfulCreate(), () => showAlert('Failed to create','error'))}}",
+                      "onClick": "{{postKraCategory.run(() => kraObj.onSuccessfulCreate(), () => showAlert('Failed to create','error'))}}",
                       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                      "dynamicPropertyPathList": [],
                       "displayName": "Button",
                       "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
                       "searchTags": [
@@ -3421,7 +3427,7 @@
                       "rightColumn": 64,
                       "textSize": "0.875rem",
                       "widgetId": "4ghd64o6dz",
-                      "tableData": "{{getKra.data}}",
+                      "tableData": "{{getKraCategories.data}}",
                       "label": "Data",
                       "searchKey": "",
                       "parentId": "2wzg41bbqi",
@@ -4458,8 +4464,9 @@
                       "resetFormOnClick": false,
                       "boxShadow": "none",
                       "widgetName": "DeleteBtn",
-                      "onClick": "{{deleteKra.run(() => kraObj.onSuccessfulDelete(), () => showAlert('Failed to Delete','error'))}}",
+                      "onClick": "{{deleteKraCategory.run(() => kraObj.onSuccessfulDelete(), () => showAlert('Failed to Delete','error'))}}",
                       "buttonColor": "#dc2626",
+                      "dynamicPropertyPathList": [],
                       "displayName": "Button",
                       "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
                       "searchTags": [
@@ -4779,8 +4786,9 @@
                       "resetFormOnClick": false,
                       "boxShadow": "none",
                       "widgetName": "Button9",
-                      "onClick": "{{deleteEmp.run(() => empObj.onSuccessfulDelete(), () => showAlert('Failed to delete','error'))}}",
+                      "onClick": "{{empObj.onDelete()}}",
                       "buttonColor": "#dc2626",
+                      "dynamicPropertyPathList": [],
                       "displayName": "Button",
                       "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
                       "searchTags": [
@@ -4912,6 +4920,14 @@
             {
               "id": "AdminDashboard_getEmployees",
               "name": "getEmployees",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "AdminDashboard_getKraCategories",
+              "name": "getKraCategories",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [],

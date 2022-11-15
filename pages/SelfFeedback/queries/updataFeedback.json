@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "UPDATE public.\"feedback\" SET\n  \"feedback_continue\"={{ContDoInput.text}},\n\t\"feedback_more_of\"={{candoInput.text}},\n\t\"updated_timestamp\"={{feedbackObj.getCurrentDate()}},\n\t\"cycle\"={{feedbackObj.getCurrentCycle()}},\n\t\"category\"={{KRACategoryList.selectedRow.id}},\n\t\"rating\"={{feedbackRating.value}}\n\tWHERE id = {{KRACategoryList.selectedRow.feedbackid}};",
+      "body": "UPDATE public.\"feedback\" SET\n  \"feedback_continue\"={{ContDoInput.text}},\n\t\"feedback_more_of\"={{candoInput.text}},\n\t\"updated_timestamp\"={{feedbackObj.getCurrentDate()}},\n\t\"cycle\"={{feedbackObj.getDateForCycle()}},\n\t\"category\"={{appsmith.store.feedback.id;}},\n\t\"rating\"={{feedbackRating.value}}\n\tWHERE id = {{appsmith.store.feedback.feedbackid}};",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -37,11 +37,11 @@
     "messages": [],
     "jsonPathKeys": [
       "ContDoInput.text",
-      "KRACategoryList.selectedRow.feedbackid",
-      "KRACategoryList.selectedRow.id",
+      "appsmith.store.feedback.feedbackid",
+      "appsmith.store.feedback.id;",
       "candoInput.text",
-      "feedbackObj.getCurrentCycle()",
       "feedbackObj.getCurrentDate()",
+      "feedbackObj.getDateForCycle()",
       "feedbackRating.value"
     ],
     "userSetOnLoad": false,

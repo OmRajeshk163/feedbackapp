@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "INSERT INTO public.\"feedback\" (\"from_employee\", \"to_employee\",\"feedback_continue\",\"feedback_more_of\",\"created_timestamp\",\"updated_timestamp\",\"cycle\",\"category\",\"rating\",\"feedback_type\")  \nVALUES ({{selfName.selectedOptionValue}},\n\t\t\t\tnull,\n\t\t\t\t{{ContDoInput.text}},\n\t\t\t\t{{candoInput.text}},\n\t   \t\t{{feedbackObj.getCurrentDate()}},\n\t\t\t\tnull,\n\t\t\t\t{{feedbackObj.getCurrentCycle()}},\n\t\t\t\t{{KRACategoryList.selectedRow.id}},\n\t\t\t\t{{feedbackRating.value}},\n\t\t\t\t'self');",
+      "body": "INSERT INTO public.\"feedback\" (\"from_employee\", \"to_employee\",\"feedback_continue\",\"feedback_more_of\",\"created_timestamp\",\"updated_timestamp\",\"cycle\",\"category\",\"rating\",\"feedback_type\")  \nVALUES ({{selfName.selectedOptionValue}},\n\t\t\t\tnull,\n\t\t\t\t{{ContDoInput.text}},\n\t\t\t\t{{candoInput.text}},\n\t   \t\t{{feedbackObj.getCurrentDate()}},\n\t\t\t\tnull,\n\t\t\t\t{{feedbackObj.getDateForCycle()}},\n\t\t\t\t{{appsmith.store.feedback.id}},\n\t\t\t\t{{feedbackRating.value}},\n\t\t\t\t'self');",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -37,10 +37,10 @@
     "messages": [],
     "jsonPathKeys": [
       "ContDoInput.text",
-      "KRACategoryList.selectedRow.id",
+      "appsmith.store.feedback.id",
       "candoInput.text",
-      "feedbackObj.getCurrentCycle()",
       "feedbackObj.getCurrentDate()",
+      "feedbackObj.getDateForCycle()",
       "feedbackRating.value",
       "selfName.selectedOptionValue"
     ],

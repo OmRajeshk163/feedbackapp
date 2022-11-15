@@ -19,7 +19,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n  {\n    {\n      getKraCategories.run();\n    }\n  }\n  {\n    {\n      showAlert(\"Created Successfully\", 'success');\n    }\n  }\n  {\n    {\n      closeModal('createCategory');\n    }\n  }\n}",
+      "body": "() => {\n  getKraCategories.run();\n  showAlert(\"Created Successfully\", 'success');\n  closeModal('createCategory');\n}",
       "selfReferencingDataPaths": [],
       "jsArguments": [],
       "isAsync": true
@@ -34,7 +34,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n  {\n    {\n      getKraCategories.run();\n    }\n  }\n  {\n    {\n      showAlert(\"Created Successfully\", 'success');\n    }\n  }\n  {\n    {\n      closeModal('createCategory');\n    }\n  }\n}"
+      "() => {\n  getKraCategories.run();\n  showAlert(\"Created Successfully\", 'success');\n  closeModal('createCategory');\n}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

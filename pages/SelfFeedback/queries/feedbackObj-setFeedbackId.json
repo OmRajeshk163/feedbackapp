@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "getfeeLevel",
-    "fullyQualifiedName": "peerObj.getfeeLevel",
+    "name": "setFeedbackId",
+    "fullyQualifiedName": "feedbackObj.setFeedbackId",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -13,13 +13,13 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "PeerFeedback",
-    "collectionId": "PeerFeedback_peerObj",
+    "pageId": "SelfFeedback",
+    "collectionId": "SelfFeedback_feedbackObj",
     "actionConfiguration": {
-      "timeoutInMillisecond": 10000,
+      "timeoutInMillisecond": 0,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n  const peerId = peerName.selectedOptionValue;\n  if (peerId) {\n    const selfData = getEmployees.data.find(self => self.id === peerId);\n    return selfData.level ?? \"\";\n  }\n}",
+      "body": "() => {}",
       "selfReferencingDataPaths": [],
       "jsArguments": [],
       "isAsync": false
@@ -34,14 +34,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n  const peerId = peerName.selectedOptionValue;\n  if (peerId) {\n    const selfData = getEmployees.data.find(self => self.id === peerId);\n    return selfData.level ?? \"\";\n  }\n}"
+      "() => {}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "PeerFeedback_peerObj.getfeeLevel",
+  "id": "SelfFeedback_feedbackObj.setFeedbackId",
   "deleted": false,
-  "gitSyncId": "6361ef20dfa75b056e2ed6b2_6364b0211686912326879fc4"
+  "gitSyncId": "6361ef20dfa75b056e2ed6b2_63731709a9f37c02e740e5fa"
 }

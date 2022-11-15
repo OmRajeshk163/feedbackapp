@@ -6,7 +6,7 @@
     "pluginType": "JS",
     "actions": [],
     "archivedActions": [],
-    "body": "export default {\n\tmyVar1: [],\n\tmyVar2: {},\n\tonSuccessfulCreate: () => {\n\t\t{{getKraCategories.run()}}\n\t\t{{showAlert(\"Created Successfully\", 'success')}}\n\t\t{{closeModal('createCategory')}}\n\t},\n\tonSuccessfulUpdate: () => {\n\t\t{{getKraCategories.run()}}\n\t\t{{showAlert(\"Updated Successfully\", 'success')}}\n\t\t{{closeModal('updateCategory')}}\n\t},\n\tonSuccessfulDelete: () => {\n\t\t{{deleteKraCategory.run()}}\n\t\t{{showAlert(\"Deleted Successfully\", 'success')}}\n\t\t{{getKraCategories.run()}}\n\t}\n}",
+    "body": "export default {\n\tmyVar1: [],\n\tmyVar2: {},\n\tonSuccessfulCreate: () => {\n\t\tgetKraCategories.run();\n\t\tshowAlert(\"Created Successfully\", 'success');\n\t\tcloseModal('createCategory');\n\t},\n\tonSuccessfulUpdate: () => {\n\t\tgetKraCategories.run();\n\t\tshowAlert(\"Updated Successfully\", 'success');\n\t\tcloseModal('updateCategory');\n\t},\n\tonSuccessfulDelete: () => {\n\t\tshowAlert(\"Deleted Successfully\", 'success');\n\t\tgetKraCategories.run();\n\t\tcloseModal('deleteModal');\n\t}\n}",
     "variables": [
       {
         "name": "myVar1",
