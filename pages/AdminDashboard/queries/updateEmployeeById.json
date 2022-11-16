@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "UPDATE public.\"employee\"\n  SET \"name\" = {{ updateEmpName.text }},\n\t\"role\" = {{ updateEmpRole.text }}, \n\t\"level\" = {{ updateEmpLevel.text }},\n\t\"working_since\" = {{ updateEmpWorkingSince.selectedDate }}, \n\t\"date_of_joining\" = {{ updateEmpJoiningDate.selectedDate }}, \n\t\"empid\" = {{ updateEmpID.text }}, \n\t\"reviewer\"  = {{ updateEmpReviewer.selectedOptionValue }}\n  WHERE \"id\" = {{employeeTable.selectedRow.id}};",
+      "body": "\n\tUPDATE public.\"employee\"\n  SET \"name\" = {{ updateEmpName.text }},\n\t\"role\" = {{ updateEmpRole.text }}, \n\t\"level\" = {{ updateEmpLevel.text }},\n\t\"working_since\" = {{ updateEmpWorkingSince.selectedDate }}, \n\t\"date_of_joining\" = {{ updateEmpJoiningDate.selectedDate }}, \n\t\"empid\" = {{ updateEmpID.text }}, \n\t\"reviewer\"  = {{ updateEmpReviewer.selectedOptionValue }}\n  WHERE \"id\" = {{employeeTable.selectedRow.id}};",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
