@@ -19,7 +19,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n  getKraCategories.run();\n  showAlert(\"Updated Successfully\", 'success');\n  closeModal('updateCategory');\n}",
+      "body": "() => {\n  getKraCategories.run();\n  showAlert(\"Updated Successfully\", 'success');\n  closeModal('updateCategoryModal');\n}",
       "selfReferencingDataPaths": [],
       "jsArguments": [],
       "isAsync": true
@@ -34,7 +34,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n  getKraCategories.run();\n  showAlert(\"Updated Successfully\", 'success');\n  closeModal('updateCategory');\n}"
+      "() => {\n  getKraCategories.run();\n  showAlert(\"Updated Successfully\", 'success');\n  closeModal('updateCategoryModal');\n}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

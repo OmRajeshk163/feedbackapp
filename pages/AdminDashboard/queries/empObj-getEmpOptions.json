@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "testaaa",
-    "fullyQualifiedName": "empObj.testaaa",
+    "name": "getEmpOptions",
+    "fullyQualifiedName": "empObj.getEmpOptions",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -16,10 +16,10 @@
     "pageId": "AdminDashboard",
     "collectionId": "AdminDashboard_empObj",
     "actionConfiguration": {
-      "timeoutInMillisecond": 10000,
+      "timeoutInMillisecond": 0,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n  console.log(\"jhgfdsaqwertyuiopl\", updateEmpName.text, updateEmpRole.text, updateEmpLevel.text, updateEmpWorkingSince.selectedDate, updateEmpJoiningDate.selectedDate, updateEmpID.text, updateEmpReviewer.selectedOptionValue, employeeTable.selectedRow.id);\n}",
+      "body": "() => {\n  const getOptions = getEmployees.data.map(emp => ({\n    label: emp.name,\n    value: emp.id\n  }));\n  return getOptions;\n}",
       "selfReferencingDataPaths": [],
       "jsArguments": [],
       "isAsync": false
@@ -34,14 +34,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n  console.log(\"jhgfdsaqwertyuiopl\", updateEmpName.text, updateEmpRole.text, updateEmpLevel.text, updateEmpWorkingSince.selectedDate, updateEmpJoiningDate.selectedDate, updateEmpID.text, updateEmpReviewer.selectedOptionValue, employeeTable.selectedRow.id);\n}"
+      "() => {\n  const getOptions = getEmployees.data.map(emp => ({\n    label: emp.name,\n    value: emp.id\n  }));\n  return getOptions;\n}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "AdminDashboard_empObj.testaaa",
+  "id": "AdminDashboard_empObj.getEmpOptions",
   "deleted": false,
-  "gitSyncId": "6361ef20dfa75b056e2ed6b2_637365081351c74a8ce8a37a"
+  "gitSyncId": "6361ef20dfa75b056e2ed6b2_6374c4c5b9cf46780e15b5ce"
 }
