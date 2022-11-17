@@ -143,7 +143,7 @@
                               ],
                               "labelPosition": "Left",
                               "options": "{{reviewerObj.getEmpOptions()}}",
-                              "placeholderText": "Select optionsObj",
+                              "placeholderText": "Select Reviewer",
                               "isDisabled": false,
                               "key": "k9dka1los6",
                               "labelTextSize": "1.25rem",
@@ -571,7 +571,7 @@
                               ],
                               "labelPosition": "Left",
                               "options": "{{reviewerObj.getFeedbackOptions()}}",
-                              "placeholderText": "Select optionsObj",
+                              "placeholderText": "Select peer",
                               "isDisabled": false,
                               "key": "k9dka1los6",
                               "labelTextSize": "1.25rem",
@@ -2671,6 +2671,9 @@
                                         },
                                         {
                                           "key": "defaultRate"
+                                        },
+                                        {
+                                          "key": "tooltips"
                                         }
                                       ],
                                       "isDisabled": false,
@@ -2688,7 +2691,7 @@
                                       "activeColor": "{{appsmith.theme.colors.primaryColor}}",
                                       "size": "LARGE",
                                       "isAllowHalf": false,
-                                      "tooltips": "[\n  \"Terrible\",\n  \"Bad\",\n  \"Neutral\",\n  \"Good\",\n  \"Great\"\n]"
+                                      "tooltips": "{{feedbackObj.ratingsTooltips}}"
                                     },
                                     {
                                       "widgetName": "caregoryTitlelbl",
@@ -3239,15 +3242,15 @@
                                       "defaultPageSize": 0,
                                       "columnOrder": [
                                         "category",
+                                        "feedback_continue",
+                                        "feedback_more_of",
+                                        "cycle",
+                                        "rating",
                                         "id",
                                         "from_employee",
                                         "to_employee",
-                                        "feedback_continue",
-                                        "feedback_more_of",
                                         "created_timestamp",
                                         "updated_timestamp",
-                                        "cycle",
-                                        "rating",
                                         "feedback_type"
                                       ],
                                       "dynamicPropertyPathList": [],
@@ -3258,9 +3261,9 @@
                                         "step": 62,
                                         "status": 75,
                                         "category": 190,
-                                        "feedback_more_of": 437,
+                                        "feedback_more_of": 393,
                                         "cycle": 80,
-                                        "feedback_continue": 435,
+                                        "feedback_continue": 347,
                                         "rating": 73
                                       },
                                       "parentRowSpace": 10,
