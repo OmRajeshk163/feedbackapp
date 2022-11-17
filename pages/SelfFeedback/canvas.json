@@ -960,6 +960,9 @@
                               "dynamicPropertyPathList": [
                                 {
                                   "key": "isDisabled"
+                                },
+                                {
+                                  "key": "onClick"
                                 }
                               ],
                               "displayName": "Button",
