@@ -2817,7 +2817,7 @@
             {
               "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
               "widgetName": "adminPanalTab",
-              "borderColor": "#E0DEDE",
+              "borderColor": "#e4e4e7",
               "isCanvas": true,
               "displayName": "Tabs",
               "iconSVG": "/static/media/icon.74a6d653c8201e66f1cd367a3fba2657.svg",
@@ -2833,13 +2833,13 @@
               "leftColumn": 1,
               "dynamicBindingPathList": [
                 {
-                  "key": "accentColor"
-                },
-                {
                   "key": "borderRadius"
                 },
                 {
                   "key": "boxShadow"
+                },
+                {
+                  "key": "accentColor"
                 }
               ],
               "children": [
@@ -5600,12 +5600,12 @@
               ],
               "borderWidth": 1,
               "key": "09e5qqap2l",
-              "backgroundColor": "#FFFFFF",
+              "backgroundColor": "#fff",
               "isDeprecated": false,
               "rightColumn": 63,
               "widgetId": "omiviusp8h",
               "accentColor": "{{appsmith.theme.colors.primaryColor}}",
-              "defaultTab": "Employees",
+              "defaultTab": "Dashboard",
               "shouldShowTabs": true,
               "tabsObj": {
                 "tabo4rum11pf4": {
