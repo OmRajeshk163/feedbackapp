@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT DISTINCT ON (review.id) * FROM public.\"employee\" peer JOIN public.\"employee\" review ON peer.reviewer=review.id;",
+      "body": "SELECT * FROM public.\"employee\" emp1 WHERE EXISTS (SELECT 1 FROM public.\"employee\" emp2 WHERE emp2.reviewer = emp1.id) order by id;",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -26,7 +26,7 @@
         }
       ]
     },
-    "executeOnLoad": false,
+    "executeOnLoad": true,
     "dynamicBindingPathList": [],
     "isValid": true,
     "invalids": [],

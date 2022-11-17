@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "postgres-plugin",
   "unpublishedAction": {
-    "name": "getKraCategories",
+    "name": "getAllReviewers",
     "datasource": {
       "name": "FeedbackBeta",
       "pluginId": "postgres-plugin",
@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT * FROM public.\"kra_category\" ORDER BY id ASC;",
+      "body": "SELECT DISTINCT ON (reviewer.id) * FROM public.\"employee\" peer JOIN public.\"employee\" reviewer ON peer.reviewer=reviewer.id;",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -37,7 +37,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "ReviewerFeedback_getKraCategories",
+  "id": "ReviewerFeedback_getAllReviewers",
   "deleted": false,
-  "gitSyncId": "6361ef20dfa75b056e2ed6b2_6364e83803193515321c0826"
+  "gitSyncId": "6361ef20dfa75b056e2ed6b2_6375bc9fb9cf46780e15c938"
 }

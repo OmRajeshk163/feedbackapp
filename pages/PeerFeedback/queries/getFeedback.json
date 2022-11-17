@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT * FROM public.\"feedback\";\n\n",
+      "body": "SELECT * FROM public.\"feedback\" ORDER BY id ASC;\n\n",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {

@@ -16,7 +16,7 @@
     "pageId": "AdminDashboard",
     "collectionId": "AdminDashboard_empObj",
     "actionConfiguration": {
-      "timeoutInMillisecond": 0,
+      "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
       "body": "() => {\n  const getOptions = getEmployees.data.map(emp => ({\n    label: emp.name,\n    value: emp.id\n  }));\n  return getOptions;\n}",

@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "postgres-plugin",
   "unpublishedAction": {
-    "name": "getKraCategories",
+    "name": "getReference",
     "datasource": {
       "name": "FeedbackBeta",
       "pluginId": "postgres-plugin",
@@ -13,12 +13,12 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "ReviewerFeedback",
+    "pageId": "AdminDashboard",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT * FROM public.\"kra_category\" ORDER BY id ASC;",
+      "body": "SELECT * FROM public.\"feedback\" WHERE from_employee={{employeeTable.selectedRow.id}} OR to_employee={{employeeTable.selectedRow.id}} \n\n/*SELECT * FROM public.\"employee\" Where id IN (SELECT 1 FROM public.\"feedback\" WHERE from_employee={{employeeTable.selectedRow.id}} OR to_employee={{employeeTable.selectedRow.id}}) OR reviewer={{employeeTable.selectedRow.id}}*/",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -26,18 +26,24 @@
         }
       ]
     },
-    "executeOnLoad": true,
-    "dynamicBindingPathList": [],
+    "executeOnLoad": false,
+    "dynamicBindingPathList": [
+      {
+        "key": "body"
+      }
+    ],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [],
+    "jsonPathKeys": [
+      "employeeTable.selectedRow.id"
+    ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "ReviewerFeedback_getKraCategories",
+  "id": "AdminDashboard_getReference",
   "deleted": false,
-  "gitSyncId": "6361ef20dfa75b056e2ed6b2_6364e83803193515321c0826"
+  "gitSyncId": "6361ef20dfa75b056e2ed6b2_6375c9ad1351c74a8ce8d833"
 }
