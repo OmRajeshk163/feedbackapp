@@ -4662,11 +4662,14 @@
                                         },
                                         {
                                           "key": "borderRadius"
+                                        },
+                                        {
+                                          "key": "text"
                                         }
                                       ],
                                       "shouldTruncate": false,
                                       "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
-                                      "text": "6",
+                                      "text": "{{getReviewerFeedbackCount.data[0]?.count??0}}",
                                       "key": "3cgyxqhd4g",
                                       "isDeprecated": false,
                                       "rightColumn": 16,
@@ -4756,6 +4759,9 @@
                                         },
                                         {
                                           "key": "borderRadius"
+                                        },
+                                        {
+                                          "key": "progress"
                                         }
                                       ],
                                       "key": "fd9jxog503",
@@ -4771,7 +4777,7 @@
                                       "renderMode": "CANVAS",
                                       "isLoading": false,
                                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                                      "progress": "45",
+                                      "progress": "{{empObj.getReviewerFeedbackProgress()??0}}",
                                       "counterClockwise": false
                                     }
                                   ],
@@ -5307,11 +5313,14 @@
                                         },
                                         {
                                           "key": "borderRadius"
+                                        },
+                                        {
+                                          "key": "text"
                                         }
                                       ],
                                       "shouldTruncate": false,
                                       "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
-                                      "text": "4",
+                                      "text": "\n{{getSelfFeedbackCount.data[0]?.count??0}}",
                                       "key": "3cgyxqhd4g",
                                       "isDeprecated": false,
                                       "rightColumn": 16,
@@ -5401,6 +5410,9 @@
                                         },
                                         {
                                           "key": "borderRadius"
+                                        },
+                                        {
+                                          "key": "progress"
                                         }
                                       ],
                                       "key": "fd9jxog503",
@@ -5416,7 +5428,7 @@
                                       "renderMode": "CANVAS",
                                       "isLoading": false,
                                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                                      "progress": 50,
+                                      "progress": "{{empObj.getSelfFeedbackProgress()??0}}",
                                       "counterClockwise": false
                                     }
                                   ],
@@ -5522,11 +5534,14 @@
                                         },
                                         {
                                           "key": "borderRadius"
+                                        },
+                                        {
+                                          "key": "text"
                                         }
                                       ],
                                       "shouldTruncate": false,
                                       "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
-                                      "text": "3",
+                                      "text": "{{getPeerFeedbackCount.data[0].count}}",
                                       "key": "3cgyxqhd4g",
                                       "isDeprecated": false,
                                       "rightColumn": 16,
@@ -5616,6 +5631,9 @@
                                         },
                                         {
                                           "key": "borderRadius"
+                                        },
+                                        {
+                                          "key": "progress"
                                         }
                                       ],
                                       "key": "fd9jxog503",
@@ -5631,7 +5649,7 @@
                                       "renderMode": "CANVAS",
                                       "isLoading": false,
                                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                                      "progress": "25",
+                                      "progress": "{{empObj.getPeerFeedbackProgress()??0}}",
                                       "counterClockwise": false
                                     }
                                   ],
@@ -6538,8 +6556,34 @@
               "timeoutInMillisecond": 10000
             },
             {
+              "id": "AdminDashboard_getReviewerFeedbackCount",
+              "name": "getReviewerFeedbackCount",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
+            {
               "id": "AdminDashboard_getReviewers",
               "name": "getReviewers",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "AdminDashboard_getSelfFeedbackCount",
+              "name": "getSelfFeedbackCount",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "AdminDashboard_getPeerFeedbackCount",
+              "name": "getPeerFeedbackCount",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [],

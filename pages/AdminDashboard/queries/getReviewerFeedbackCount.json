@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "postgres-plugin",
   "unpublishedAction": {
-    "name": "getPeerFeedbackCount",
+    "name": "getReviewerFeedbackCount",
     "datasource": {
       "name": "FeedbackBeta",
       "pluginId": "postgres-plugin",
@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT COUNT(id) FROM public.\"employee\" emp\nWHERE  EXISTS (SELECT * FROM public.\"feedback\" fdbk WHERE fdbk.to_employee = emp.id AND fdbk.feedback_type='peer');\n",
+      "body": "SELECT COUNT(id) FROM public.\"employee\" emp\nWHERE  EXISTS (SELECT * FROM public.\"feedback\" fdbk WHERE fdbk.from_employee = emp.id AND fdbk.feedback_type='reviewer');\n",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -37,7 +37,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "AdminDashboard_getPeerFeedbackCount",
+  "id": "AdminDashboard_getReviewerFeedbackCount",
   "deleted": false,
-  "gitSyncId": "6361ef20dfa75b056e2ed6b2_63845553fa57b54aac1bddd0"
+  "gitSyncId": "6361ef20dfa75b056e2ed6b2_6384630bfa57b54aac1bdf4b"
 }
