@@ -4012,40 +4012,31 @@
                           "key": "childStylesheet.editActions.discardBorderRadius"
                         },
                         {
-                          "key": "primaryColumns.id.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.from_employee.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.to_employee.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.feedback_continue.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.feedback_more_of.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.created_timestamp.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.updated_timestamp.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.cycle.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.category.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.rating.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.feedback_type.computedValue"
-                        },
-                        {
                           "key": "tableData"
+                        },
+                        {
+                          "key": "primaryColumns.From_name.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.To_name.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.Category.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.Feedback_continue.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.Feedback_can_do_more.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.Rating.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.Feedback_type.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.Cycle.computedValue"
                         }
                       ],
                       "leftColumn": 1,
@@ -4088,17 +4079,14 @@
                       "widgetName": "feedbackTable",
                       "defaultPageSize": 0,
                       "columnOrder": [
-                        "id",
-                        "from_employee",
-                        "to_employee",
-                        "feedback_continue",
-                        "feedback_more_of",
-                        "created_timestamp",
-                        "updated_timestamp",
-                        "cycle",
-                        "category",
-                        "rating",
-                        "feedback_type"
+                        "From_name",
+                        "To_name",
+                        "Category",
+                        "Feedback_continue",
+                        "Feedback_can_do_more",
+                        "Rating",
+                        "Feedback_type",
+                        "Cycle"
                       ],
                       "dynamicPropertyPathList": [],
                       "displayName": "Table",
@@ -4115,44 +4103,44 @@
                       "dynamicTriggerPathList": [],
                       "borderWidth": "1",
                       "primaryColumns": {
-                        "id": {
+                        "From_name": {
                           "allowCellWrapping": false,
                           "index": 0,
                           "width": 150,
-                          "originalId": "id",
-                          "id": "id",
-                          "alias": "id",
+                          "originalId": "From_name",
+                          "id": "From_name",
+                          "alias": "From_name",
                           "horizontalAlignment": "LEFT",
                           "verticalAlignment": "CENTER",
-                          "columnType": "number",
+                          "columnType": "text",
                           "textColor": "",
                           "textSize": "0.875rem",
                           "fontStyle": "",
                           "enableFilter": true,
                           "enableSort": true,
-                          "isVisible": false,
+                          "isVisible": true,
                           "isDisabled": false,
                           "isCellEditable": false,
                           "isEditable": false,
                           "isCellVisible": true,
                           "isDerived": false,
-                          "label": "id",
+                          "label": "From_name",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
-                          "computedValue": "{{feedbackTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"id\"]))}}",
+                          "computedValue": "{{feedbackTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"From_name\"]))}}",
                           "validation": {},
                           "cellBackground": ""
                         },
-                        "from_employee": {
+                        "To_name": {
                           "allowCellWrapping": false,
                           "index": 1,
                           "width": 150,
-                          "originalId": "from_employee",
-                          "id": "from_employee",
-                          "alias": "from_employee",
+                          "originalId": "To_name",
+                          "id": "To_name",
+                          "alias": "To_name",
                           "horizontalAlignment": "LEFT",
                           "verticalAlignment": "CENTER",
-                          "columnType": "number",
+                          "columnType": "text",
                           "textColor": "",
                           "textSize": "0.875rem",
                           "fontStyle": "",
@@ -4164,20 +4152,20 @@
                           "isEditable": false,
                           "isCellVisible": true,
                           "isDerived": false,
-                          "label": "from_employee",
+                          "label": "To_name",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
-                          "computedValue": "{{feedbackTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"from_employee\"]))}}",
+                          "computedValue": "{{feedbackTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"To_name\"]))}}",
                           "validation": {},
                           "cellBackground": ""
                         },
-                        "to_employee": {
+                        "Category": {
                           "allowCellWrapping": false,
                           "index": 2,
                           "width": 150,
-                          "originalId": "to_employee",
-                          "id": "to_employee",
-                          "alias": "to_employee",
+                          "originalId": "Category",
+                          "id": "Category",
+                          "alias": "Category",
                           "horizontalAlignment": "LEFT",
                           "verticalAlignment": "CENTER",
                           "columnType": "text",
@@ -4192,20 +4180,20 @@
                           "isEditable": false,
                           "isCellVisible": true,
                           "isDerived": false,
-                          "label": "to_employee",
+                          "label": "Category",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
-                          "computedValue": "{{feedbackTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"to_employee\"]))}}",
+                          "computedValue": "{{feedbackTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Category\"]))}}",
                           "validation": {},
                           "cellBackground": ""
                         },
-                        "feedback_continue": {
+                        "Feedback_continue": {
                           "allowCellWrapping": false,
                           "index": 3,
                           "width": 150,
-                          "originalId": "feedback_continue",
-                          "id": "feedback_continue",
-                          "alias": "feedback_continue",
+                          "originalId": "Feedback_continue",
+                          "id": "Feedback_continue",
+                          "alias": "Feedback_continue",
                           "horizontalAlignment": "LEFT",
                           "verticalAlignment": "CENTER",
                           "columnType": "text",
@@ -4220,20 +4208,20 @@
                           "isEditable": false,
                           "isCellVisible": true,
                           "isDerived": false,
-                          "label": "feedback_continue",
+                          "label": "Feedback_continue",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
-                          "computedValue": "{{feedbackTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"feedback_continue\"]))}}",
+                          "computedValue": "{{feedbackTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Feedback_continue\"]))}}",
                           "validation": {},
                           "cellBackground": ""
                         },
-                        "feedback_more_of": {
+                        "Feedback_can_do_more": {
                           "allowCellWrapping": false,
                           "index": 4,
                           "width": 150,
-                          "originalId": "feedback_more_of",
-                          "id": "feedback_more_of",
-                          "alias": "feedback_more_of",
+                          "originalId": "Feedback_can_do_more",
+                          "id": "Feedback_can_do_more",
+                          "alias": "Feedback_can_do_more",
                           "horizontalAlignment": "LEFT",
                           "verticalAlignment": "CENTER",
                           "columnType": "text",
@@ -4248,48 +4236,48 @@
                           "isEditable": false,
                           "isCellVisible": true,
                           "isDerived": false,
-                          "label": "feedback_more_of",
+                          "label": "Feedback_can_do_more",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
-                          "computedValue": "{{feedbackTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"feedback_more_of\"]))}}",
+                          "computedValue": "{{feedbackTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Feedback_can_do_more\"]))}}",
                           "validation": {},
                           "cellBackground": ""
                         },
-                        "created_timestamp": {
+                        "Rating": {
                           "allowCellWrapping": false,
                           "index": 5,
                           "width": 150,
-                          "originalId": "created_timestamp",
-                          "id": "created_timestamp",
-                          "alias": "created_timestamp",
+                          "originalId": "Rating",
+                          "id": "Rating",
+                          "alias": "Rating",
                           "horizontalAlignment": "LEFT",
                           "verticalAlignment": "CENTER",
-                          "columnType": "text",
+                          "columnType": "number",
                           "textColor": "",
                           "textSize": "0.875rem",
                           "fontStyle": "",
                           "enableFilter": true,
                           "enableSort": true,
-                          "isVisible": false,
+                          "isVisible": true,
                           "isDisabled": false,
                           "isCellEditable": false,
                           "isEditable": false,
                           "isCellVisible": true,
                           "isDerived": false,
-                          "label": "created_timestamp",
+                          "label": "Rating",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
-                          "computedValue": "{{feedbackTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"created_timestamp\"]))}}",
+                          "computedValue": "{{feedbackTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Rating\"]))}}",
                           "validation": {},
                           "cellBackground": ""
                         },
-                        "updated_timestamp": {
+                        "Feedback_type": {
                           "allowCellWrapping": false,
                           "index": 6,
                           "width": 150,
-                          "originalId": "updated_timestamp",
-                          "id": "updated_timestamp",
-                          "alias": "updated_timestamp",
+                          "originalId": "Feedback_type",
+                          "id": "Feedback_type",
+                          "alias": "Feedback_type",
                           "horizontalAlignment": "LEFT",
                           "verticalAlignment": "CENTER",
                           "columnType": "text",
@@ -4298,26 +4286,26 @@
                           "fontStyle": "",
                           "enableFilter": true,
                           "enableSort": true,
-                          "isVisible": false,
+                          "isVisible": true,
                           "isDisabled": false,
                           "isCellEditable": false,
                           "isEditable": false,
                           "isCellVisible": true,
                           "isDerived": false,
-                          "label": "updated_timestamp",
+                          "label": "Feedback_type",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
-                          "computedValue": "{{feedbackTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"updated_timestamp\"]))}}",
+                          "computedValue": "{{feedbackTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Feedback_type\"]))}}",
                           "validation": {},
                           "cellBackground": ""
                         },
-                        "cycle": {
+                        "Cycle": {
                           "allowCellWrapping": false,
                           "index": 7,
                           "width": 150,
-                          "originalId": "cycle",
-                          "id": "cycle",
-                          "alias": "cycle",
+                          "originalId": "Cycle",
+                          "id": "Cycle",
+                          "alias": "Cycle",
                           "horizontalAlignment": "LEFT",
                           "verticalAlignment": "CENTER",
                           "columnType": "text",
@@ -4332,94 +4320,10 @@
                           "isEditable": false,
                           "isCellVisible": true,
                           "isDerived": false,
-                          "label": "cycle",
+                          "label": "Cycle",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
-                          "computedValue": "{{feedbackTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"cycle\"]))}}",
-                          "validation": {},
-                          "cellBackground": ""
-                        },
-                        "category": {
-                          "allowCellWrapping": false,
-                          "index": 8,
-                          "width": 150,
-                          "originalId": "category",
-                          "id": "category",
-                          "alias": "category",
-                          "horizontalAlignment": "LEFT",
-                          "verticalAlignment": "CENTER",
-                          "columnType": "number",
-                          "textColor": "",
-                          "textSize": "0.875rem",
-                          "fontStyle": "",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": true,
-                          "isDisabled": false,
-                          "isCellEditable": false,
-                          "isEditable": false,
-                          "isCellVisible": true,
-                          "isDerived": false,
-                          "label": "category",
-                          "isSaveVisible": true,
-                          "isDiscardVisible": true,
-                          "computedValue": "{{feedbackTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"category\"]))}}",
-                          "validation": {},
-                          "cellBackground": ""
-                        },
-                        "rating": {
-                          "allowCellWrapping": false,
-                          "index": 9,
-                          "width": 150,
-                          "originalId": "rating",
-                          "id": "rating",
-                          "alias": "rating",
-                          "horizontalAlignment": "LEFT",
-                          "verticalAlignment": "CENTER",
-                          "columnType": "number",
-                          "textColor": "",
-                          "textSize": "0.875rem",
-                          "fontStyle": "",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": true,
-                          "isDisabled": false,
-                          "isCellEditable": false,
-                          "isEditable": false,
-                          "isCellVisible": true,
-                          "isDerived": false,
-                          "label": "rating",
-                          "isSaveVisible": true,
-                          "isDiscardVisible": true,
-                          "computedValue": "{{feedbackTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"rating\"]))}}",
-                          "validation": {},
-                          "cellBackground": ""
-                        },
-                        "feedback_type": {
-                          "allowCellWrapping": false,
-                          "index": 10,
-                          "width": 150,
-                          "originalId": "feedback_type",
-                          "id": "feedback_type",
-                          "alias": "feedback_type",
-                          "horizontalAlignment": "LEFT",
-                          "verticalAlignment": "CENTER",
-                          "columnType": "text",
-                          "textColor": "",
-                          "textSize": "0.875rem",
-                          "fontStyle": "",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": true,
-                          "isDisabled": false,
-                          "isCellEditable": false,
-                          "isEditable": false,
-                          "isCellVisible": true,
-                          "isDerived": false,
-                          "label": "feedback_type",
-                          "isSaveVisible": true,
-                          "isDiscardVisible": true,
-                          "computedValue": "{{feedbackTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"feedback_type\"]))}}",
+                          "computedValue": "{{feedbackTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Cycle\"]))}}",
                           "validation": {},
                           "cellBackground": ""
                         }
@@ -4429,7 +4333,7 @@
                       "rightColumn": 63,
                       "textSize": "0.875rem",
                       "widgetId": "p2c7vl95qp",
-                      "tableData": "{{getFeedback.data}}",
+                      "tableData": "{{feedbackObj.getTableValue()}}",
                       "label": "Data",
                       "searchKey": "",
                       "parentId": "3cnuu3lxzw",
@@ -6616,14 +6520,6 @@
               "timeoutInMillisecond": 10000
             },
             {
-              "id": "AdminDashboard_getFeedback",
-              "name": "getFeedback",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [],
-              "timeoutInMillisecond": 10000
-            },
-            {
               "id": "AdminDashboard_getKraCategories",
               "name": "getKraCategories",
               "confirmBeforeExecute": false,
@@ -6633,6 +6529,14 @@
             }
           ],
           [
+            {
+              "id": "AdminDashboard_getFeedback",
+              "name": "getFeedback",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
             {
               "id": "AdminDashboard_getReviewers",
               "name": "getReviewers",

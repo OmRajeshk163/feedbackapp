@@ -1,0 +1,25 @@
+{
+  "unpublishedCollection": {
+    "name": "feedbackObj",
+    "pageId": "AdminDashboard",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\tmyVar1: [],\n\tmyVar2: {},\n\tgetTableValue: () => {\n\t\tvar to_emp;\n\t\treturn getFeedback.data.map(feed => ({\n\t\t\tFrom_name: getEmployees.data.find(emp => (feed.from_employee == emp.id)).name,\n\t\t\tTo_name: (to_emp = getEmployees.data.find(emp => (feed.to_employee == emp.id))) != undefined?to_emp.name:NaN,\n\t\t\tCategory: getKraCategories.data.find(kra => (feed.category == kra.id)).name,\n\t\t\tFeedback_continue: feed.feedback_continue,\n\t\t\tFeedback_can_do_more: feed.feedback_more_of,\n\t\t\tRating: feed.rating,\n\t\t\tFeedback_type: feed.feedback_type,\n\t\t\tCycle: feed.cycle\n\t\t}));\n\t},\n\tmyFun2: async () => {\n\t\t//use async-await or promises\n\t}\n}",
+    "variables": [
+      {
+        "name": "myVar1",
+        "value": "[]"
+      },
+      {
+        "name": "myVar2",
+        "value": "{}"
+      }
+    ],
+    "userPermissions": []
+  },
+  "id": "AdminDashboard_feedbackObj",
+  "deleted": false,
+  "gitSyncId": "6361ef20dfa75b056e2ed6b2_63844cf1fa57b54aac1bdd17"
+}
