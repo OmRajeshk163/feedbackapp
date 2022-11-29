@@ -3790,7 +3790,7 @@
                   "widgetName": "Canvas5",
                   "displayName": "Canvas",
                   "topRow": 1,
-                  "bottomRow": 830,
+                  "bottomRow": 860,
                   "parentRowSpace": 1,
                   "type": "CANVAS_WIDGET",
                   "canExtend": false,
@@ -3810,11 +3810,12 @@
                   "children": [
                     {
                       "boxShadow": "none",
-                      "widgetName": "reviewerSelect",
+                      "widgetName": "toEmpSelect",
                       "isFilterable": true,
+                      "dynamicPropertyPathList": [],
                       "displayName": "Select",
                       "iconSVG": "/static/media/icon.bd99caba5853ad71e4b3d8daffacb3a2.svg",
-                      "labelText": "",
+                      "labelText": "To Employee",
                       "searchTags": [
                         "dropdown"
                       ],
@@ -3829,7 +3830,60 @@
                       "animateLoading": true,
                       "parentColumnSpace": 11.857421875,
                       "dynamicTriggerPathList": [],
-                      "leftColumn": 43,
+                      "leftColumn": 14,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "accentColor"
+                        },
+                        {
+                          "key": "borderRadius"
+                        },
+                        {
+                          "key": "options"
+                        }
+                      ],
+                      "labelPosition": "Top",
+                      "options": "{{empObj.getEmpOptions()}}",
+                      "placeholderText": "Select Employee",
+                      "isDisabled": false,
+                      "key": "kqhms0dsp3",
+                      "labelTextSize": "0.875rem",
+                      "isRequired": false,
+                      "isDeprecated": false,
+                      "rightColumn": 27,
+                      "widgetId": "3h663t03uj",
+                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                      "isVisible": true,
+                      "version": 1,
+                      "parentId": "3cnuu3lxzw",
+                      "labelAlignment": "left",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "onOptionChange": ""
+                    },
+                    {
+                      "boxShadow": "none",
+                      "widgetName": "reviewerSelect",
+                      "isFilterable": true,
+                      "displayName": "Select",
+                      "iconSVG": "/static/media/icon.bd99caba5853ad71e4b3d8daffacb3a2.svg",
+                      "labelText": "From Reviewer",
+                      "searchTags": [
+                        "dropdown"
+                      ],
+                      "topRow": 7,
+                      "bottomRow": 11,
+                      "parentRowSpace": 10,
+                      "labelWidth": 5,
+                      "type": "SELECT_WIDGET",
+                      "serverSideFiltering": false,
+                      "hideCard": false,
+                      "defaultOptionValue": "",
+                      "animateLoading": true,
+                      "parentColumnSpace": 11.857421875,
+                      "dynamicTriggerPathList": [],
+                      "leftColumn": 50,
                       "dynamicBindingPathList": [
                         {
                           "key": "accentColor"
@@ -3849,10 +3903,10 @@
                       "labelTextSize": "0.875rem",
                       "isRequired": false,
                       "isDeprecated": false,
-                      "rightColumn": 56,
+                      "rightColumn": 63,
                       "widgetId": "069oao4ptn",
                       "accentColor": "{{appsmith.theme.colors.primaryColor}}",
-                      "isVisible": true,
+                      "isVisible": false,
                       "version": 1,
                       "parentId": "3cnuu3lxzw",
                       "labelAlignment": "left",
@@ -3866,7 +3920,7 @@
                       "isFilterable": true,
                       "displayName": "Select",
                       "iconSVG": "/static/media/icon.bd99caba5853ad71e4b3d8daffacb3a2.svg",
-                      "labelText": "",
+                      "labelText": "Cycle Type",
                       "searchTags": [
                         "dropdown"
                       ],
@@ -3880,25 +3934,32 @@
                       "defaultOptionValue": "",
                       "animateLoading": true,
                       "parentColumnSpace": 11.857421875,
-                      "dynamicTriggerPathList": [],
-                      "leftColumn": 29,
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onOptionChange"
+                        }
+                      ],
+                      "leftColumn": 40,
                       "dynamicBindingPathList": [
                         {
                           "key": "accentColor"
                         },
                         {
                           "key": "borderRadius"
+                        },
+                        {
+                          "key": "options"
                         }
                       ],
                       "labelPosition": "Top",
-                      "options": "[\n  {\n    \"label\": \"June 2020\",\n    \"value\": \"jun20\"\n  },\n\t{\n    \"label\": \"October 2020\",\n    \"value\": \"oct20\"\n  },\n\t{\n    \"label\": \"June 2021\",\n    \"value\": \"jun21\"\n  },\n\t{\n    \"label\": \"October 2021\",\n    \"value\": \"oct21\"\n  },\n\t{\n    \"label\": \"June 2022\",\n    \"value\": \"jun22\"\n  },\n\t{\n    \"label\": \"October 2022\",\n    \"value\": \"oct22\"\n  }\n]",
+                      "options": "{{feedbackObj.getCycleOption()}}",
                       "placeholderText": "Select Cycle",
                       "isDisabled": false,
                       "key": "kqhms0dsp3",
                       "labelTextSize": "0.875rem",
                       "isRequired": false,
                       "isDeprecated": false,
-                      "rightColumn": 42,
+                      "rightColumn": 50,
                       "widgetId": "4uk2sk7ctc",
                       "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                       "isVisible": true,
@@ -3907,7 +3968,8 @@
                       "labelAlignment": "left",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}"
+                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "onOptionChange": "{{feedbackObj.getTableValue()}}"
                     },
                     {
                       "boxShadow": "none",
@@ -3915,7 +3977,7 @@
                       "isFilterable": true,
                       "displayName": "Select",
                       "iconSVG": "/static/media/icon.bd99caba5853ad71e4b3d8daffacb3a2.svg",
-                      "labelText": "",
+                      "labelText": "KRA Category",
                       "searchTags": [
                         "dropdown"
                       ],
@@ -3929,8 +3991,12 @@
                       "defaultOptionValue": "",
                       "animateLoading": true,
                       "parentColumnSpace": 11.857421875,
-                      "dynamicTriggerPathList": [],
-                      "leftColumn": 15,
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onOptionChange"
+                        }
+                      ],
+                      "leftColumn": 27,
                       "dynamicBindingPathList": [
                         {
                           "key": "accentColor"
@@ -3950,7 +4016,7 @@
                       "labelTextSize": "0.875rem",
                       "isRequired": false,
                       "isDeprecated": false,
-                      "rightColumn": 28,
+                      "rightColumn": 40,
                       "widgetId": "0m5cnmk0s5",
                       "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                       "isVisible": true,
@@ -3959,14 +4025,15 @@
                       "labelAlignment": "left",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}"
+                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "onOptionChange": "{{feedbackObj.getTableValue()}}"
                     },
                     {
                       "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
                       "borderColor": "#E0DEDE",
                       "isVisibleDownload": true,
                       "iconSVG": "/static/media/icon.db8a9cbd2acd22a31ea91cc37ea2a46c.svg",
-                      "topRow": 13,
+                      "topRow": 16,
                       "isSortable": true,
                       "type": "TABLE_WIDGET_V2",
                       "inlineEditingSaveOption": "ROW_LEVEL",
@@ -4088,14 +4155,20 @@
                         "Feedback_type",
                         "Cycle"
                       ],
-                      "dynamicPropertyPathList": [],
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "isVisiblePagination"
+                        }
+                      ],
                       "displayName": "Table",
-                      "bottomRow": 81,
+                      "bottomRow": 84,
                       "columnWidthMap": {
                         "task": 245,
                         "step": 62,
                         "status": 75,
-                        "cycle": 131
+                        "cycle": 131,
+                        "feedback_continue": 170,
+                        "feedback_more_of": 171
                       },
                       "parentRowSpace": 10,
                       "hideCard": false,
@@ -4337,10 +4410,11 @@
                       "label": "Data",
                       "searchKey": "",
                       "parentId": "3cnuu3lxzw",
+                      "serverSidePaginationEnabled": false,
                       "renderMode": "CANVAS",
                       "horizontalAlignment": "LEFT",
                       "isVisibleSearch": true,
-                      "isVisiblePagination": true,
+                      "isVisiblePagination": "true",
                       "verticalAlignment": "CENTER"
                     },
                     {
@@ -4444,12 +4518,12 @@
                     },
                     {
                       "boxShadow": "none",
-                      "widgetName": "EmpSelect",
+                      "widgetName": "fromEmpSelect",
                       "isFilterable": true,
                       "dynamicPropertyPathList": [],
                       "displayName": "Select",
                       "iconSVG": "/static/media/icon.bd99caba5853ad71e4b3d8daffacb3a2.svg",
-                      "labelText": "",
+                      "labelText": "From Employee",
                       "searchTags": [
                         "dropdown"
                       ],
@@ -4463,7 +4537,11 @@
                       "defaultOptionValue": "",
                       "animateLoading": true,
                       "parentColumnSpace": 11.857421875,
-                      "dynamicTriggerPathList": [],
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onOptionChange"
+                        }
+                      ],
                       "leftColumn": 1,
                       "dynamicBindingPathList": [
                         {
@@ -4494,7 +4572,7 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                      "onOptionChange": ""
+                      "onOptionChange": "{{feedbackObj.getTableValue()}}"
                     }
                   ],
                   "key": "er7d1zm9zj",
@@ -5734,7 +5812,7 @@
               "rightColumn": 63,
               "widgetId": "omiviusp8h",
               "accentColor": "{{appsmith.theme.colors.primaryColor}}",
-              "defaultTab": "Dashboard",
+              "defaultTab": "Feedbacks",
               "shouldShowTabs": true,
               "tabsObj": {
                 "tabo4rum11pf4": {
