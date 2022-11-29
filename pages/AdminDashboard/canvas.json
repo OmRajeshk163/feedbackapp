@@ -5812,7 +5812,7 @@
               "rightColumn": 63,
               "widgetId": "omiviusp8h",
               "accentColor": "{{appsmith.theme.colors.primaryColor}}",
-              "defaultTab": "Feedbacks",
+              "defaultTab": "Dashboard",
               "shouldShowTabs": true,
               "tabsObj": {
                 "tabo4rum11pf4": {
